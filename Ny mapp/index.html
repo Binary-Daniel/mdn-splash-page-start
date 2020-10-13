@@ -100,8 +100,8 @@
 <body>
     <header>
         <h1>Mozilla</h1>
-        <img src="firefoxlogo120.png">
-        
+        <img src="firefoxlogo120.png" alt="Firefox logo">
+
     </header>
 
     <main>
@@ -119,23 +119,34 @@
         <div class="further-info">
             <!-- insert images with srcsets and sizes -->
             <a href="https://www.mozilla.org/en-US/firefox/new/">
-                <img>
+                <img srcset="firefoxlogo120.png 120w,
+                             firefoxlogo400.png 400w" sizes="(max-width: 500px) 120px,
+                            400px" scr="firefoxlogo400.png" alt="Download Firefox">
             </a>
             <a href="https://www.mozilla.org/">
-                <img src="dinosaur400.png" alt="ee">
+                <img srcset="dinosaur120.png 120w,
+                             dinosaur400.png 400w" sizes="(max-width: 500px) 120px,
+                            400px" src="dinosaur400.png" alt="Learn more about Mozilla">
             </a>
             <a href="https://addons.mozilla.org/">
-                <img srcset="firefoxaddons120.png 120w,dinosaur400.png 400w" sizes="(max-width: 500px) 400px,120px" src="firefoxlogo400.png" alt="ee">
+                <img srcset="firefoxaddons120.png 120w,
+                             firefoxaddons400.png 400w" sizes="(max-width: 500px) 120px,
+                            400px" src="firefoxaddons400.png" alt="Customize Firefox with add-ons">
             </a>
             <a href="https://developer.mozilla.org/en-US/">
-                <img>
+                <img src="mdn.svg" alt="Learn web development with MDN">
             </a>
             <div class="clearfix"></div>
         </div>
 
         <div class="red-panda">
             <!-- insert picture element -->
+            <picture>
+                <source media="(max-width: 600px)" srcset="red-panda600.png">
+                <img src="red-panda1200.png" alt="a red panda">
+            </picture>
         </div>
 
     </main>
-</body></html>
+</body>
+</html>
